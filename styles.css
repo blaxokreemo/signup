@@ -55,7 +55,7 @@ body {
     position: relative;
     top: 12.5%;
     
-    height: 25%;
+    height: 20%;
 
     background-color: rgba(0, 0, 0, 0.5);
 
@@ -78,6 +78,7 @@ body {
 
 .form {
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 10px -3px #d3d2d2;
 }
 
 .row {
@@ -89,7 +90,12 @@ body {
 
 h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: min(calc(0.5rem + 2vh), calc(0.5rem + 2vw));
+    font-size: min(calc(0.25rem + 2vh), calc(0.25rem + 2vw));
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: min(calc(0.25rem + 1.5vh), calc(0.25rem + 1.5vw));
 }
 
 img {
@@ -108,7 +114,6 @@ label {
 }
 
 input,
-button,
 textarea,
 select {
     width: 250px;
@@ -127,6 +132,25 @@ input:focus {
     outline: none;
     border: 2px solid #87b4e7;
     box-shadow: 2px 2px 4px #dddddd
+}
+
+input:invalid {
+    outline: none;
+    border: 2px solid #e03f3f;
+}
+
+button {
+    background-color: #596D48;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 200px;
+    padding: 15px 0;
+    color: #e7e7e7;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px #bdbcbc;
 }
 
 p {
