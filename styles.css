@@ -57,7 +57,7 @@ body {
     
     height: 20%;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
 
     font-family: "norsebold", sans-serif;
     color: antiquewhite;
@@ -151,6 +151,15 @@ button {
     font-size: 1rem;
     font-weight: 600;
     box-shadow: 2px 2px 5px #bdbcbc;
+}
+
+button:hover {
+    background-color: #728a5d;
+}
+
+button:active {
+    box-shadow: inset 2px 2px 5px #585858;
+    color: #FFFFFF;
 }
 
 p {
