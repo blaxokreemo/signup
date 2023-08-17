@@ -134,12 +134,31 @@ input:focus {
     box-shadow: 2px 2px 4px #dddddd
 }
 
-input:invalid {
+input:not(:placeholder-shown):not(:focus):invalid,
+input.error,
+input.error:focus {
     outline: none;
     border: 2px solid #e03f3f;
 }
 
-button {
+p.error::after {
+    content: "*Passwords do not match";
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(0.25rem + 1vh);
+    color: #e03f3f;
+    position: absolute;
+    bottom: -2vh;
+}
+
+input.match,
+input.match:focus {
+    outline: none;
+    border: 2px solid #69ce41;
+    box-shadow: 2px 2px 4px #dddddd
+}
+
+.btn {
     background-color: #596D48;
     border-radius: 5px;
     outline: none;
@@ -153,16 +172,22 @@ button {
     box-shadow: 2px 2px 5px #bdbcbc;
 }
 
-button:hover {
+.btn:hover {
     background-color: #728a5d;
 }
 
-button:active {
+.btn:active {
     box-shadow: inset 2px 2px 5px #585858;
     color: #FFFFFF;
+}
+
+.btn:disabled {
+    background-color: #8a8989;
+    pointer-events: none;
 }
 
 p {
     padding: 0px;
     margin: 5px;
+    position: relative;
 }
